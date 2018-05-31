@@ -11,14 +11,16 @@ In old-french silogisme, greek συλλογισμός, latin syllogismos.
 
 Example:
 
-    All man are mortal·
-    Socrates is a man·
+    All man are mortal.
+    Socrates is a man.
   
     ∴
-    Socrates is mortal·
+    Socrates is mortal ∎
 
 Notations:
 
     ∴  therefore
-    ·  middle dot, what was to be demonstrated (quod erat demonstrandum meaning — latin)
+    ∎  end of proof
+       (what was to be demonstrated)
+       (quod erat demonstrandum meaning — latin)
     
