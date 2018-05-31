@@ -15,12 +15,12 @@ In old-french silogisme, greek συλλογισμός, latin syllogismos.
     Socrates is a man.
   
     ∴
-    Socrates is mortal∎
+    Socrates is mortal•
 
 #### Notations:
 
     ∴  therefore
-    ∎  end of proof
+    •  end of proof
        (what was to be demonstrated)
        («quod erat demonstrandum» in latin)
     
