@@ -1,0 +1,33 @@
+.Container {
+  background: oldlace;
+  width: 100%;
+
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.Content {
+  background: yellow;
+  overflow: auto;
+
+  max-height: 100%;
+  max-height: -moz-available;
+  max-height: -webkit-fill-available;
+  max-height: fill-available;
+}
+
+.Header {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+}
+
+.TabHeaderItem {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+  color: black;
+}
+
+.TabHeaderItemCurrent {
+  text-decoration: none;
+}

@@ -1,0 +1,48 @@
+.Overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.Modal {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr 200px;
+  grid-template-areas: 'header  header'
+                       'content aside '
+                       'footer  aside ';
+}
+
+.Aside {
+  background: yellow;
+  grid-area: aside;
+}
+
+.Content {
+  background: lightgreen;
+  grid-area: content;
+  padding: 20px;
+
+  display: flex;
+}
+
+.Header {
+  background: cyan;
+  grid-area: header;
+}
+
+.Footer {
+  background: magenta;
+  grid-area: footer;
+  padding: 40px;
+}

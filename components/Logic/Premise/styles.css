@@ -1,0 +1,30 @@
+.Container {
+  display: block;
+}
+
+.Predicate,
+.Subject,
+.Quantity,
+.Quality {
+  display: inline-block;
+}
+
+.Quantity {
+  /*width: 3.5em;*/
+  /*color: lightgray;*/
+}
+
+.Subject,
+.Predicate {
+  /*width: 7em;*/
+}
+
+.Quality {
+  /*width: 4em;*/
+  /*color: lightgray;*/
+}
+
+.Syllogism {
+  color: lightgray;
+  margin-bottom: 10px;
+}

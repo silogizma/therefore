@@ -1,0 +1,18 @@
+.Container {
+  /*padding: 10px;*/
+}
+
+.Label {
+  color: lightgray;
+  padding: 20px 5px 5px;
+}
+
+.Inline {
+  display: inline-block;
+}
+
+.LabelTherefore {
+  /*margin-left: calc(3.5em + 8px);*/
+  color: #0f0f0f;
+  font-size: 1.2em;
+}
