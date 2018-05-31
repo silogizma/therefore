@@ -14,7 +14,7 @@ Example:
     All man are mortal.
     Socrates is a man.
   
-    Therefore ∴
+    ∴
     Socrates is mortal.
 
 Notations:
