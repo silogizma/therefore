@@ -11,14 +11,14 @@ In old-french silogisme, greek συλλογισμός, latin syllogismos.
 
 #### Example:
 
-    All man are mortal
-    , Socrates is a man
+      All man are mortal
+    ∵ Socrates is a man
     ∴ Socrates is mortal
 
 #### Notations:
 
     ∴  therefore
-    ,  comma between the major and minor propositions.
+    ∵  minor (distributed) proposition
     •  end of proof
        (what was to be demonstrated)
        («quod erat demonstrandum» in latin)
