@@ -1,5 +1,3 @@
-silogizma.org/syllogism?meta=biyoloji,turkce,ege&syllo=a-tohumkesesi-meyve,a-domates-tohumkesesi,a-domates-meyve
+### Deductive Reasoning Tool
 
-silogizma.org/submit
-
-silogizma.org/index
+Not ready yet.
