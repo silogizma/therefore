@@ -22,5 +22,5 @@ Notations:
     ∴  therefore
     ∎  end of proof
        (what was to be demonstrated)
-       (quod erat demonstrandum meaning — latin)
+       («quod erat demonstrandum» in latin)
     
