@@ -1,5 +1,26 @@
-silogizma.org/syllogism?meta=biyoloji,turkce,ege&syllo=a-tohumkesesi-meyve,a-domates-tohumkesesi,a-domates-meyve
+## Deductive Reasoning Tool
 
-silogizma.org/submit
+Not ready yet.
 
-silogizma.org/index
+### Syllogism
+
+In logic, an argument that applies deductive reasoning to arrive conclusion 
+by on two (major, minor) propositions.
+
+In old-french silogisme, greek συλλογισμός, latin syllogismos.
+
+#### Example:
+
+      All man are mortal
+    ∵ Socrates is a man
+    ∴ Socrates is mortal
+
+#### Notations:
+
+    ∴  therefore
+    ∵  minor (distributed) proposition
+    •  end of proof
+       (what was to be demonstrated)
+       («quod erat demonstrandum» in latin)
+    
+A running instance is available on http://silogizma.org
