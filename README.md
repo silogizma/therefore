@@ -11,8 +11,8 @@ In old-french silogisme, greek συλλογισμός, latin syllogismos.
 
 #### Example:
 
-    All man are mortal.
-    Socrates is a man.
+    All man are mortal,
+    Socrates is a man
   
     ∴
     Socrates is mortal•
