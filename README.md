@@ -9,3 +9,16 @@ by on two (major, minor) propositions.
 
 In old-french silogisme, greek συλλογισμός, latin syllogismos.
 
+Example:
+
+    All man are mortal.
+    Socrates is a man.
+  
+    Therefore ∴
+    Socrates is mortal.
+
+Notations:
+
+    ∴  therefore
+    .  what was to be demonstrated (quod erat demonstrandum meaning — latin)
+    
