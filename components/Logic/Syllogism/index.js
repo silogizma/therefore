@@ -26,7 +26,7 @@ export default function Syllogism({
       />
       <Label
         className={ styles.LabelTherefore }
-        text={ '∴ therefore' }
+        text={ '∴' }
       />
       <Premise
         editable={ editable }

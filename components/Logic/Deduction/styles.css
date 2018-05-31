@@ -17,8 +17,8 @@
 }
 
 .ValidArgument {
-  background: lightgreen;
-  color: green;
+  background: white;
+  color: #0edef9;
 }
 
 .ValidArgument span {
