@@ -2,10 +2,10 @@
 
 Not ready yet.
 
-### Syllogism
-## (old-french silogisme)
-## (greek συλλογισμός)
-## (latin syllogismos)
+#### Syllogism
 
 In logic, an argument that applies deductive reasoning to arrive conclusion 
 by on two (major, minor) propositions.
+
+In old-french silogisme, greek συλλογισμός, latin syllogismos.
+
