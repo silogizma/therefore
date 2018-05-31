@@ -23,4 +23,4 @@ In old-french silogisme, greek συλλογισμός, latin syllogismos.
        (what was to be demonstrated)
        («quod erat demonstrandum» in latin)
     
-A running instance is available on https://silogizma.org
+A running instance is available on http://silogizma.org
