@@ -16,20 +16,20 @@ const SYLLOGISMS = [
     major: premise({
       universal: true,
       affirmative: true,
-      subject: 'human',
-      predicate: 'mortal',
+      subject: 'cats',
+      predicate: 'happy',
     }),
     minor: premise({
       universal: false,
       affirmative: true,
-      subject: 'socrates',
-      predicate: 'human',
+      subject: 'dogs',
+      predicate: 'happy',
     }),
     conclusion: premise({
       universal: false,
       affirmative: true,
-      subject: 'socrates',
-      predicate: 'mortal',
+      subject: 'cats',
+      predicate: 'dogs',
     }),
   }),
 ];
@@ -43,9 +43,9 @@ export default ({
     dialect,
     observer,
   } = {
-    lang: 'turkish',
-    dialect: 'karabuk',
-    observer: 'fatih',
+    lang: 'biology',
+    dialect: 'english',
+    observer: 'bager',
   };
 
   return (
