@@ -17,19 +17,19 @@ const SYLLOGISMS = [
       universal: true,
       affirmative: true,
       subject: 'human',
-      predicate: 'kepçe',
+      predicate: 'mortal',
     }),
     minor: premise({
       universal: false,
       affirmative: true,
-      subject: 'orhan',
+      subject: 'socrates',
       predicate: 'human',
     }),
     conclusion: premise({
       universal: false,
       affirmative: true,
-      subject: 'orhan',
-      predicate: 'kepçe',
+      subject: 'socrates',
+      predicate: 'mortal',
     }),
   }),
 ];
