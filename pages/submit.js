@@ -31,7 +31,8 @@ const ShareLink = ({ syllogism, base }) => {
       href={ path }
       style={{
         fontSize: 20,
-        cursor: 'grabbing'
+        cursor: 'grabbing',
+        color: 'gray'
       }}
     >
       { path }
