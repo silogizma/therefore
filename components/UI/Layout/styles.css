@@ -39,7 +39,7 @@ body {
   overflow: hidden;
   padding: 0;
   margin: 0;
-  background: yellow;
+  /*background: lightgray;*/
   mix-blend-mode: multiply;
   /*background-size: 20px 20px;
   background-image: 
@@ -54,7 +54,7 @@ body {
 
 .nav li {
   list-style: none;
-  padding: 10px 10px 7px;
+  padding: 10px 0 7px;
   margin: 0;
   color: black;
   display: inline-block;
