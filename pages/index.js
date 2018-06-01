@@ -51,13 +51,13 @@ export default ({
   return (
     <div>
       <Layout>
-        <Heading>varsayımlar</Heading>
+        <Heading>context</Heading>
         <Argument
           language={ lang }
           dialect={ dialect }
           observer={ observer }
         />
-        <Heading>tasım</Heading>
+        <Heading>deduction syllogism (tümden gelim)</Heading>
         <Deduction
           syllogisms={ SYLLOGISMS }
         />
