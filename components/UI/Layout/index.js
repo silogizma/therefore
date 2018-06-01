@@ -21,15 +21,8 @@ export default function Layout({
           <Link
             href="/"
           >
-            home
+            <a href={'/'}>home(example)</a>
           </Link>
-        </li>
-        <li>
-          <a
-            href="//github.com/silogizma/therefore"
-          >
-            { 'readme.md (on github)' }
-          </a>
         </li>
         <li>
           <Link
@@ -42,6 +35,20 @@ export default function Layout({
       <section className={ styles.content }>
         { children }
       </section>
+      <footer>
+        <span>
+          ∴ = therefore
+        </span>
+        <p>
+          ...
+          <br />
+          <a
+            href="//github.com/silogizma/therefore"
+          >
+            read readme.md on github
+          </a>
+        </p>
+      </footer>
     </div>
   );
 }

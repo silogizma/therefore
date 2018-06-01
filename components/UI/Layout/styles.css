@@ -33,10 +33,13 @@ body {
 
 .nav {
   /*background: ghostwhite;*/
+  position: absolute;
+  width: 700px;
   text-align: center;
-  margin: -7px 0 0;
+  margin-top: -50px;
+  margin-left: 50px;
   overflow: hidden;
-  padding: 4px 0;
+  padding: 4px 0 4px 20px;
 
   background: yellow;
   mix-blend-mode: multiply;
@@ -53,15 +56,24 @@ body {
 
 .nav li {
   list-style: none;
-  padding: 0 15px;
+  padding: 0 10px;
   margin: 0;
   color: black;
   display: inline-block;
   float: left;
+  /*border-right: 3px dotted black;*/
 }
 
 .nav li a {
   text-decoration: none;
+  mix-blend-mode: difference;
+  color: slategray;
+  cursor: grabbing;
+}
+
+.nav li a:hover {
+  mix-blend-mode: normal;
+  background: #fdffde;
   color: black;
 }
 
@@ -79,6 +91,12 @@ body {
 
 .logo {
   color: currentColor;
+  text-align: left;
+  margin-left: -15px;
+}
+
+.logo img {
+  mix-blend-mode: difference;
 }
 
 .logo span {
@@ -86,3 +104,33 @@ body {
   padding: 3px 20px;
 }
 
+footer {
+  margin-top: 22px;
+  padding: 10px 0 0;
+  color: lightgray;
+  border-top: 10px solid transparent;
+}
+
+footer p {
+  text-align: center;
+  color: gray;
+  padding: 0px 0;
+  font-size: 0.9em;
+  margin-top: 0;
+}
+
+footer span {
+  color: gray;
+}
+
+footer a {
+  font-size: 0.8em;
+  color: gray;
+  text-decoration: none;
+  cursor: grabbing;
+}
+
+footer a:hover {
+  color: black;
+  text-decoration: underline;
+}

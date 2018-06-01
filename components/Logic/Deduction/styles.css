@@ -17,12 +17,20 @@
 }
 
 .ValidArgument {
-  background: white;
+  /*background: white;*/
   color: #0edef9;
+  padding: 0;
+  mix-blend-mode: multiply;
 }
 
 .ValidArgument span {
-  text-decoration: underline;
+  color: black;
+  border-bottom: 5px dotted #0edef9;
+}
+
+.Analysis quote {
+  display: block;
+  padding: 5px 0;
 }
 
 .WeakArgument {

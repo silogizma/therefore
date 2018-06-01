@@ -20,6 +20,63 @@ const INITIAL_STATE = syllogism({
   conclusion: premise.fromString('a-liva-mortal'),
 });
 
+const ShareLink = ({ syllogism, base }) => {
+  const path = [
+    base,
+    buildSyllogismPath(syllogism)
+  ].join('?');
+
+  return (
+    <a
+      href={ path }
+      style={{
+        fontSize: 20,
+        cursor: 'grabbing'
+      }}
+    >
+      { path }
+    </a>
+  );
+};
+
+const buildSyllogismPath = ({
+  major,
+  minor,
+  conclusion,
+}) => {
+  const propositions = [
+    [
+      premise.getPropositionForm(major).toLowerCase(),
+      major.subject,
+      major.predicate,
+    ].join(
+      '-'
+    ),
+
+    [
+      premise.getPropositionForm(minor).toLowerCase(),
+      minor.subject,
+      minor.predicate,
+    ].join(
+      '-'
+    ),
+
+    [
+      premise.getPropositionForm(conclusion).toLowerCase(),
+      conclusion.subject,
+      conclusion.predicate,
+    ].join(
+      '-'
+    ),
+  ].join(',');
+  return [
+    'meta=biyoloji,turkce,ege',
+    `syllo=${propositions}`
+  ].join(
+    '&'
+  );
+}
+
 export default class extends Component {
   constructor(props) {
     super(props);
@@ -59,6 +116,11 @@ export default class extends Component {
         <Heading>preview</Heading>
         <Deduction
           syllogisms={ [buffer] }
+        />
+        <Heading>share</Heading>
+        <ShareLink
+          syllogism={ buffer }
+          base={ `http://silogizma.org/syllogism` }
         />
       </Layout>
     );

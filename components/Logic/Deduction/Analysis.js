@@ -24,7 +24,7 @@ export default function Proposition({
   const lines = [
     type && (
       <div className={ styles.ValidArgument }>
-        Argument in <span>{type}</span> form.
+        argument in <span>{type}</span> form
       </div>
     ),
 
@@ -55,6 +55,7 @@ export default function Proposition({
   return (
     <div className={ styles.Analysis }>
       { lines }
+      <quote>{'«erat demonstrandum»'}</quote>
     </div>
   );
 }
