@@ -54,7 +54,7 @@ export default function Proposition({
 
   return (
     <div className={ styles.Analysis }>
-      { lines }
+      { lines.map((line, i) => <div key={ i }>{ line }</div>)}
       {/*<quote>{'«erat demonstrandum»'}</quote>*/}
     </div>
   );

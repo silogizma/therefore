@@ -118,7 +118,7 @@ const optionsQuality = (affirmative, onChange) => {
     <select onChange={
       onChange
     }>
-      <option value={ 'affirmative' }>are</option>
+      <option value={ 'affirmative'}>are</option>
       <option value={ 'negative' }>are not</option>
     </select>
   );
@@ -140,6 +140,9 @@ const makeSyllogism = (
   predicate,
   editable,
   onEdit,
+
+  selectable,
+  conclusionOf,
 ) => {
   const labelQuantity = (
     labelFlaggedBools(
@@ -184,8 +187,10 @@ const makeSyllogism = (
         editable,
         value => event => {
           onEdit('subject', value);
-        }
-      )
+        },
+        selectable,
+        conclusionOf
+      ),
     ),
     spaceDelimiter,
 
@@ -217,7 +222,9 @@ const makeSyllogism = (
         editable,
         value => event => {
           onEdit('predicate', value);
-        }
+        },
+        selectable,
+        conclusionOf
       )
     ),
 
@@ -235,7 +242,9 @@ export default function Premise({
   subject,
   predicate,
   editable,
-  onEdit
+  onEdit,
+  selectable,
+  conclusionOf,
 }) {
 
   const asSyllogism = (
@@ -245,14 +254,23 @@ export default function Premise({
       subject,
       predicate,
       editable,
-      onEdit
+      onEdit,
+      selectable,
+      conclusionOf,
     )
   );
 
   return (
     <div className={ styles.Container }>
       <div className={ styles.Syllogism }>
-        { asSyllogism }
+        {
+          asSyllogism.map(
+            (part, index) => 
+              <span key={ index }>
+                { part }
+              </span>
+          )
+        }
       </div>
     </div>
   );

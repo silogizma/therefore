@@ -25,14 +25,14 @@ export default function Layout({
           <Link
             href="/"
           >
-            <a href={'/'}>home(example)</a>
+            <a>home(example)</a>
           </Link>
         </li>
         <li>
           <Link
             prefetch href="/submit"
           >
-            submit
+            <a>submit</a>
           </Link>
         </li>
       </ul>

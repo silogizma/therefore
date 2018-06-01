@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import Premise from '../Premise';
+import Conclusion from '../Conclusion';
 import Label from './Label';
 import styles from './styles.css';
 
@@ -28,7 +29,9 @@ export default function Syllogism({
         className={ styles.LabelTherefore }
         text={ '∴' }
       />
-      <Premise
+      <Conclusion
+        major={ major }
+        minor={ minor }
         editable={ editable }
         onEdit={ onEdit('conclusion') }
         { ...conclusion }

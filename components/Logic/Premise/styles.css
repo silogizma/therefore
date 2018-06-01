@@ -28,3 +28,13 @@
   color: gray;
   margin-bottom: 10px;
 }
+
+.Syllogism input,
+.Syllogism select {
+  font-size: 0.7em;
+  font-family: 'Fira Code', monospace;
+}
+
+.Syllogism input {
+  width: 120px;
+}

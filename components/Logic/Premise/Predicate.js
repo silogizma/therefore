@@ -11,15 +11,47 @@ function input(predicate, onChange) {
   );
 }
 
+function select(predicate, onChange, conclusionOf) {
+  const options = conclusionOf.map(
+    ({ predicate }) => predicate
+  );
+
+  return (
+    <select
+      style={{
+        width: 120
+      }}
+      onChange={
+        event =>
+          onChange(event.target.value)(event)
+      }
+    >
+      {
+        options.map(
+          (value, index) =>
+            <option key={ index }>
+              { value }
+            </option>
+        )
+      }
+    </select>
+  );
+}
+
 export default (
   predicate,
   editable,
   onChange,
+
+  selectable,
+  conclusionOf
 ) => {
   return (
     <div className={ styles.Predicate }>
       { editable
-        ? input(predicate, onChange)
+        ? selectable
+          ? select(predicate, onChange, conclusionOf)
+          : input(predicate, onChange)
         : underline(predicate)
       }
     </div>

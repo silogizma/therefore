@@ -10,7 +10,15 @@ export default function Deduction({
 }) {
   return (
     <div className={ styles.Container }>
-      { syllogisms.map(renderSyllogism) }
+      {
+        syllogisms.map(
+          (syllo, index) =>
+            <Proposition
+              key={ index }
+              {...syllo}
+            />
+        )
+      }
     </div>
   );
 }
