@@ -24,3 +24,10 @@ In old-french silogisme, greek συλλογισμός, latin syllogismos.
        («quod erat demonstrandum» in latin)
     
 A running instance is available on http://silogizma.org
+
+### Will Be Explained
+
+  - How to proof by a deduction
+  - Deploying on a domain
+  - Colored subject and predicates
+  
