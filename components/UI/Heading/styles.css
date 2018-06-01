@@ -1,8 +1,12 @@
 .Heading {
   color: red;
   font-weight: normal;
-  margin: 15px 0 0;
-  padding: 15px 0;
+  margin: 25px 0 0;
+  padding: 0 0 0;
   text-align: left;
   font-size: 1em;
+}
+
+.Heading:first-child {
+  margin-top: 5px;
 }

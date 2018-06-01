@@ -4,7 +4,7 @@
 
 .Label {
   color: lightgray;
-  padding: 20px 5px 5px;
+  padding: 0 5px 5px;
 }
 
 .Inline {
@@ -13,6 +13,6 @@
 
 .LabelTherefore {
   /*margin-left: calc(3.5em + 8px);*/
-  color: lightgray;
-  font-size: 1.2em;
+  color: gray;
+  font-size: 2em;
 }

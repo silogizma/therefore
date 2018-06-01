@@ -55,7 +55,7 @@ export default function Proposition({
   return (
     <div className={ styles.Analysis }>
       { lines }
-      <quote>{'«erat demonstrandum»'}</quote>
+      {/*<quote>{'«erat demonstrandum»'}</quote>*/}
     </div>
   );
 }

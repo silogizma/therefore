@@ -40,9 +40,6 @@ export default function Layout({
         { children }
       </section>
       <footer>
-        <span>
-          ∴ = therefore
-        </span>
         <p>
           ...
           <br />

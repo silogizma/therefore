@@ -1,6 +1,7 @@
 body {
+  margin: 0;
   background-size: 20px 20px;
-  background-position: 3px 17px;
+  background-position: 4px 17px;
   /*background: white;*/
   background-image: 
     linear-gradient(
@@ -26,7 +27,7 @@ body {
 .grid {
   /*background: #f1f1f1;*/
   /*min-height: 900px;*/
-  width: 30em;
+  width: 20em;
   margin: auto;
   height: 100%;
 }
@@ -34,14 +35,10 @@ body {
 .nav {
   /*background: ghostwhite;*/
   z-index: 9;
-  position: absolute;
-  width: 700px;
   text-align: center;
-  margin-top: -50px;
-  margin-left: 70px;
   overflow: hidden;
-  padding: 4px 0 4px 20px;
-
+  padding: 0;
+  margin: 0;
   background: yellow;
   mix-blend-mode: multiply;
   /*background-size: 20px 20px;
@@ -69,7 +66,7 @@ body {
   text-decoration: none;
   mix-blend-mode: difference;
   color: slategray;
-  cursor: grabbing;
+  cursor: pointer;
 }
 
 .nav li a:hover {
@@ -84,15 +81,15 @@ body {
 
 .logo {
   margin: 0;
-  padding: 18px;
+  padding: 17px;
   font-weight: normal;
   text-align: center;
   font-size: 1.1em;
+  text-align: center;
 }
 
 .logo {
   color: currentColor;
-  text-align: left;
   margin-left: -15px;
 }
 

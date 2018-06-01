@@ -36,7 +36,7 @@ const labelFlaggedBools = (
 );
 
 const endOfCategoricalProposition = (
-  <span>{'.'}</span>
+  <span>{' '}</span>
 );
 
 const spaceDelimiter = (
