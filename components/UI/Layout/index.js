@@ -9,12 +9,16 @@ export default function Layout({
   return (
     <div className={ styles.grid }>
       <h1 className={ styles.logo }>
-        <img
-          height={ 60 }
-          width={ 60 }
-          alt={ 'silogizma' }
-          src="/static/logo.png"
-        />
+        <a
+          href={'/'}
+        >
+          <img
+            height={ 60 }
+            width={ 60 }
+            alt={ 'silogizma' }
+            src="/static/logo.png"
+          />
+        </a>
       </h1>
       <ul className={ styles.nav }>
         <li>

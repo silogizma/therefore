@@ -9,9 +9,18 @@ export default function Argument({
 }) {
   return (
     <div className={ styles.Container }>
-      language { language } <br />
-      diealect { dialect } <br />
-      observer { observer }
+      <span className={ styles.Label }>
+        language
+      </span>
+      { language } <br />
+      <span className={ styles.Label }>
+        diealect
+      </span>
+      { dialect } <br />
+      <span className={ styles.Label }>
+        observer
+      </span>
+      { observer }
     </div>
   );
 }

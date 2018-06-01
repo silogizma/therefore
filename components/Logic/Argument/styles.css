@@ -1,3 +1,9 @@
 .Container {
-  color: black;
+  color: gray;
+}
+
+.Label {
+  width: 140px;
+  display: inline-block;
+  color: #484848;
 }

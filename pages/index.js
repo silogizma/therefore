@@ -43,7 +43,7 @@ export default ({
     dialect,
     observer,
   } = {
-    lang: 'tr',
+    lang: 'turkish',
     dialect: 'karabuk',
     observer: 'fatih',
   };

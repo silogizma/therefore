@@ -33,11 +33,12 @@ body {
 
 .nav {
   /*background: ghostwhite;*/
+  z-index: 9;
   position: absolute;
   width: 700px;
   text-align: center;
   margin-top: -50px;
-  margin-left: 50px;
+  margin-left: 70px;
   overflow: hidden;
   padding: 4px 0 4px 20px;
 
@@ -56,7 +57,7 @@ body {
 
 .nav li {
   list-style: none;
-  padding: 0 10px;
+  padding: 10px 10px 7px;
   margin: 0;
   color: black;
   display: inline-block;
@@ -96,7 +97,7 @@ body {
 }
 
 .logo img {
-  mix-blend-mode: difference;
+  mix-blend-mode: initial;
 }
 
 .logo span {
