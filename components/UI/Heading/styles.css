@@ -1,12 +1,27 @@
 .Heading {
-  color: red;
+  color: hotpink;
   font-weight: normal;
   margin: 25px 0 0;
-  padding: 0 0 0;
+  padding: 0 0;
   text-align: left;
   font-size: 1em;
+  overflow: hidden;
 }
 
 .Heading:first-child {
   margin-top: 5px;
+}
+
+.Heading i {
+  font-style: normal;
+
+display: inline-block;
+
+float: left;
+
+background: #d8faff;
+
+color: #11859a;
+
+padding: 6px 73px 4px 15px;
 }

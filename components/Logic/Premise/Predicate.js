@@ -47,7 +47,9 @@ export default (
   conclusionOf
 ) => {
   return (
-    <div className={ styles.Predicate }>
+    <div
+      className={ styles.Predicate }
+    >
       { editable
         ? selectable
           ? select(predicate, onChange, conclusionOf)

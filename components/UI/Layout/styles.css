@@ -3,17 +3,9 @@ body {
   background-size: 20px 20px;
   background-position: 4px 17px;
   /*background: white;*/
-  background-image: 
-    linear-gradient(
-      to right,
-      #b5fff6 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      to bottom,
-      #b5fff6 1px,
-      transparent 1px
-    );
+  /*background-image: 
+    linear-gradient( to right, #e1e1e1 1px, transparent 1px),
+    linear-gradient( to bottom, #e1e1e1 1px, transparent 1px);*/
   /*background-image: 
     radial-gradient(
       circle,
@@ -22,12 +14,13 @@ body {
       rgba(0, 0, 0, 0)
       1px
     );*/
+    /*font-size: 10px;*/
 }
 
 .grid {
   /*background: #f1f1f1;*/
   /*min-height: 900px;*/
-  width: 25em;
+  width: 39em;
   margin: auto;
   height: 100%;
 }
@@ -38,7 +31,7 @@ body {
   text-align: center;
   overflow: hidden;
   padding: 0;
-  margin: 0;
+  margin: 10px;
   /*background: lightgray;*/
   mix-blend-mode: multiply;
   /*background-size: 20px 20px;
@@ -54,7 +47,7 @@ body {
 
 .nav li {
   list-style: none;
-  padding: 10px 0 7px;
+  padding: 10px 10px 7px;
   margin: 0;
   color: black;
   display: inline-block;
@@ -75,10 +68,10 @@ body {
   color: black;
 }
 
-.nav li:last-child {
+/*.nav li:last-child {
   float: right;
 }
-
+*/
 .logo {
   margin: 0;
   padding: 17px;

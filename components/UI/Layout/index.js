@@ -25,7 +25,7 @@ export default function Layout({
           <Link
             href="/"
           >
-            <a>home(example)</a>
+            <a>home</a>
           </Link>
         </li>
         <li>
@@ -33,6 +33,13 @@ export default function Layout({
             prefetch href="/submit"
           >
             <a>submit</a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            prefetch href="/submit"
+          >
+            <a>definitions</a>
           </Link>
         </li>
       </ul>

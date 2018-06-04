@@ -1,5 +1,10 @@
 .Container {
   display: block;
+  border-bottom: 2px dotted #00a1ff1a;
+  height: 0.95em;
+  margin-bottom: 10px;
+  /*background: white;*/
+  padding: 10px;
 }
 
 .Predicate,
@@ -9,14 +14,17 @@
   display: inline-block;
 }
 
+.Quality,
 .Quantity {
-  /*width: 3.5em;*/
+  /*width: 9em;*/
+  /*display: inline-block;*/
   /*color: lightgray;*/
 }
 
 .Subject,
 .Predicate {
   /*width: 7em;*/
+
 }
 
 .Quality {

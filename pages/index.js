@@ -2,6 +2,7 @@ import Link from 'next/link';
 
 import Layout from '../components/UI/Layout';
 import Heading from '../components/UI/Heading';
+import Landing from '../components/UI/Landing';
 import Syllogism from '../components/Logic/Syllogism';
 import Deduction from '../components/Logic/Deduction';
 import Argument from '../components/Logic/Argument';
@@ -51,16 +52,20 @@ export default ({
   return (
     <div>
       <Layout>
-        <Heading>context</Heading>
-        <Argument
-          language={ lang }
-          dialect={ dialect }
-          observer={ observer }
-        />
-        <Heading>deduction syllogism (tümden gelim)</Heading>
-        <Deduction
-          syllogisms={ SYLLOGISMS }
-        />
+        <Landing />
+        <Heading style={{ color: 'gray', paddingLeft: 10 }}>example</Heading>
+        <div style={{ padding: 10 }}>
+          <Heading><i>context</i></Heading>
+          <Argument
+            language={ lang }
+            dialect={ dialect }
+            observer={ observer }
+          />
+          <Heading><i>argument</i></Heading>
+          <Deduction
+            syllogisms={ SYLLOGISMS }
+          />
+        </div>
       </Layout>
     </div>
   );

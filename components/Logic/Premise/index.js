@@ -45,7 +45,7 @@ const spaceDelimiter = (
 
 const colorify = (word, children) => (
   <span style={{
-    color: `#${ md5(word).substring(0, 6) }`
+    color: `#${ md5(word).substring(0, 6) }`,
   }}>
     { children }
   </span>
@@ -174,7 +174,14 @@ const makeSyllogism = (
       ? optionsQuantity(universal, (event) => {
         onEdit('universal', event.target.value === 'universal')
       })
-      : labelQuantity,
+      : (
+        <span style={{
+            minWidth: '1.7em',
+            display: 'inline-block',
+         }}>
+          { labelQuantity }
+        </span>
+      ),
     spaceDelimiter,
 
    /*
@@ -207,7 +214,12 @@ const makeSyllogism = (
         )
       :
         (  // display the part of premise
-           labelQuality
+           <span style={{
+              minWidth: '1.7em',
+              display: 'inline-block',
+           }}>
+            { labelQuality }
+          </span>
         )
       ),
     spaceDelimiter,

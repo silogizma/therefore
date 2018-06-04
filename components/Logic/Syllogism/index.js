@@ -27,8 +27,9 @@ export default function Syllogism({
       />
       <Label
         className={ styles.LabelTherefore }
-        text={ '∴' }
-      />
+      >
+        <span>∴</span>therefore
+      </Label>
       <Conclusion
         major={ major }
         minor={ minor }

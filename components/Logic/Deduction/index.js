@@ -9,7 +9,7 @@ export default function Deduction({
   syllogisms,
 }) {
   return (
-    <div className={ styles.Container }>
+    <div className={ styles.Deduction }>
       {
         syllogisms.map(
           (syllo, index) =>

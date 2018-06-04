@@ -7,6 +7,7 @@ export default function Label({
   text,
   inline,
   className,
+  children
 }) {
   const classes = classNames({
     [className]: true,
@@ -16,7 +17,7 @@ export default function Label({
 
   return (
     <div className={ classes }>
-      { text }
+      { text || children }
     </div>
   );
 }

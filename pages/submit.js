@@ -29,10 +29,14 @@ const ShareLink = ({ syllogism, base }) => {
   return (
     <a
       href={ path }
+      target={ '_blank' }
       style={{
         fontSize: 20,
-        cursor: 'grabbing',
-        color: 'gray'
+        cursor: 'pointer',
+        color: 'dblack',
+        textDecoration: 'none',
+        borderBottom: '2px dotted gray',
+        background: 'yellow'
       }}
     >
       { path }
@@ -109,20 +113,22 @@ export default class extends Component {
     const { buffer } = this.state;
     return (
       <Layout>
-        <Heading>create a syllogism</Heading>
-        <SyllogismCreation
-          onEdit={ this.handleUpdate }
-          buffer={ buffer }
-        />
-        <Heading>preview</Heading>
-        <Deduction
-          syllogisms={ [buffer] }
-        />
-        <Heading>share</Heading>
-        <ShareLink
-          syllogism={ buffer }
-          base={ `http://silogizma.org/syllogism` }
-        />
+        <div style={{ padding: 10 }}>
+          <Heading><i>create an argument</i></Heading>
+          <SyllogismCreation
+            onEdit={ this.handleUpdate }
+            buffer={ buffer }
+          />
+          <Heading><i>preview</i></Heading>
+          <Deduction
+            syllogisms={ [buffer] }
+          />
+          <Heading><i>share</i></Heading>
+          <ShareLink
+            syllogism={ buffer }
+            base={ `http://silogizma.org/syllogism` }
+          />
+        </div>
       </Layout>
     );
   }
