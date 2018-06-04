@@ -12,7 +12,6 @@ export default function Syllogism({
   editable,
   onEdit,
 }) {
-
   return (
     <div className={ styles.Container }>
       <Premise

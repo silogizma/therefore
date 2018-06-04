@@ -24,7 +24,14 @@ export default function Proposition({
   const lines = [
     type && (
       <div className={ styles.ValidArgument }>
-        argument in <span>{type}</span> form
+        argument in
+        <a
+          href={ 'https://www.wikiwand.com/en/Syllogism#/Types' }
+          target={ '_blank' }
+        >
+          {type}
+        </a>
+        form
       </div>
     ),
 

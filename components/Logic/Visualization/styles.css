@@ -1,0 +1,39 @@
+.Canvas {
+  background-size: 20px 20px;
+  background-position: 4px 17px;
+  background-image: 
+    linear-gradient( to right, #e1e1e15e 1px, transparent 1px),
+    linear-gradient( to bottom, #e1e1e15e 1px, transparent 1px);
+  /*background-image: 
+    radial-gradient(
+      circle,
+      gray
+      1px,
+      rgba(0, 0, 0, 0)
+      1px
+    );*/
+}
+
+.Canvas circle {
+  /*mix-blend-mode: exclusion;*/
+}
+
+.Overlay {
+  position: absolute;
+  /*mix-blend-mode: screen;*/
+  /*background: #a5f3ff7d;*/
+  /*mix-blend-mode: exclusion;*/
+}
+
+.Press {
+  position: absolute;
+}
+
+.Diagram circle {
+  /*mix-blend-mode: difference;*/
+}
+
+/*.propositionLeft,
+.propositionRight {
+  clip-path: circle(100px at center);
+}*/

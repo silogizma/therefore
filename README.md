@@ -12,17 +12,14 @@ In old-french silogisme, greek συλλογισμός, latin syllogismos.
 #### Example:
 
       All man are mortal
-    ∵ Socrates is a man
+      Socrates is a man
     ∴ Socrates is mortal
 
-#### Notations:
+See the following resources:
 
-    ∴  therefore
-    ∵  minor (distributed) proposition
-    •  end of proof
-       (what was to be demonstrated)
-       («quod erat demonstrandum» in latin)
-    
+ - <https://en.wikipedia.org/Categorical_proposition>
+ - <https://en.wikipedia.org/Syllogism>
+
 A running instance is available on http://silogizma.org
 
 ### Will Be Explained

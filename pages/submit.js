@@ -14,10 +14,30 @@ import premise from '../models/premise';
 import uniqueId from '../models/uniqueId';
 
 const INITIAL_STATE = syllogism({
-  id: uniqueId(),
-  major: premise.fromString('a-human-mortal'),
-  minor: premise.fromString('a-liva-human'),
-  conclusion: premise.fromString('a-liva-mortal'),
+  id: 'burdan-baksan-bir-unique-id',
+  major: premise({
+    universal: true,
+    affirmative: true,
+    subject: 'cats',
+    predicate: 'happy',
+  }),
+  minor: premise({
+    universal: false,
+    affirmative: true,
+    subject: 'dogs',
+    predicate: 'happy',
+  }),
+  conclusion: premise({
+    universal: false,
+    affirmative: true,
+    subject: 'cats',
+    predicate: 'dogs',
+  }),
+  meta: {
+    language: 'english',
+    dialect: 'istanbul',
+    observer: 'fatih',
+  },
 });
 
 const ShareLink = ({ syllogism, base }) => {
@@ -33,7 +53,7 @@ const ShareLink = ({ syllogism, base }) => {
       style={{
         fontSize: 20,
         cursor: 'pointer',
-        color: 'dblack',
+        color: 'black',
         textDecoration: 'none',
         borderBottom: '2px dotted gray',
         background: 'yellow'
@@ -48,6 +68,7 @@ const buildSyllogismPath = ({
   major,
   minor,
   conclusion,
+  meta,
 }) => {
   const propositions = [
     [
@@ -75,7 +96,7 @@ const buildSyllogismPath = ({
     ),
   ].join(',');
   return [
-    'meta=biyoloji,turkce,ege',
+    `meta=${[meta.language, meta.dialect, meta.observer].join(',')}`,
     `syllo=${propositions}`
   ].join(
     '&'

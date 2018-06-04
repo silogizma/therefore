@@ -1,8 +1,8 @@
 export function underline(word) {
   return (
     <span style={{
-      borderBottom: '0.4em solid currentColor',
-      mixBlendMode: 'exclusion',
+      borderBottom: '0.1em solid currentColor',
+      // mixBlendMode: 'exclusion',
       // background: '#0c002d',
       // textShadow: '1px 1px #ffffffb3',
       // position: 'relative',
@@ -19,7 +19,7 @@ export function underline(word) {
           fontStyle: 'normal',
           // display: 'block',
           // position: 'absolute',
-          opacity: 0.8,
+          opacity: 1,
           color: 'currentColor',
           display: 'inline-block',
           padding: '0 3px',

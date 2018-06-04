@@ -13,14 +13,14 @@
 
 .LabelTherefore {
   /*margin-left: calc(3.5em + 8px);*/
-  color: #d9d9d9;
+  color: #38e0ffad;
   font-size: 1.1em;
   display: inline-block;
-  padding: 12px 10px;
+  padding: 5px 10px;
 }
 
 .LabelTherefore span {
   margin-right: 10px;
   display: inline-block;
-  color: #5df6ff;
+  color: #38e0ffad;
 }

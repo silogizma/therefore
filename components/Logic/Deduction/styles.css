@@ -2,6 +2,7 @@
   background: white;
   padding: 5px 10px 10px 10px;
   border-top: 1px solid #b5fff6;
+  border-bottom: 1px solid #b5fff6;
   background-size: 20px 20px;
   background-position: 0 -1px;
   background-image: 
@@ -30,13 +31,25 @@
 
 .ValidArgument {
   /*background: white;*/
-  color: #0edef9;
-  padding: 0;
-  mix-blend-mode: multiply;
+  text-align: center;
+  padding: 10px;
+  mix-blend-mode: normal;
+  /*float: right;*/
+  position: absolute;
+  margin-top: -9.3em;
+  margin-left: 18em;
+  text-align: left;
+  width: 18em;
+  border-left: 0 solid #b5fff6;
+  height: 9em;
+  background: transparent;
+  color: #11859a;
 }
 
-.ValidArgument span {
+.ValidArgument a {
   color: black;
+  display: inline-block;
+  margin: 0 5px;
   border-bottom: 5px dotted #0edef9;
 }
 

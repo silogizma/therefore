@@ -14,14 +14,9 @@
 
 .Heading i {
   font-style: normal;
-
-display: inline-block;
-
-float: left;
-
-background: #d8faff;
-
-color: #11859a;
-
-padding: 6px 73px 4px 15px;
+  display: inline-block;
+  float: left;
+  background: #d8faff;
+  color: #11859a;
+  padding: 6px 73px 4px 15px;
 }

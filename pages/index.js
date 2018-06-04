@@ -6,12 +6,13 @@ import Landing from '../components/UI/Landing';
 import Syllogism from '../components/Logic/Syllogism';
 import Deduction from '../components/Logic/Deduction';
 import Argument from '../components/Logic/Argument';
+import VennDiagram from '../components/Logic/Visualization/VennDiagram';
 
 import syllogism from '../models/syllogism';
 import premise from '../models/premise';
 import uniqueId from '../models/uniqueId';
 
-const SYLLOGISMS = [
+const example =
   syllogism({
     id: 'burdan-baksan-bir-unique-id',
     major: premise({
@@ -32,8 +33,7 @@ const SYLLOGISMS = [
       subject: 'cats',
       predicate: 'dogs',
     }),
-  }),
-];
+  });
 
 export default ({
   url,
@@ -63,7 +63,7 @@ export default ({
           />
           <Heading><i>argument</i></Heading>
           <Deduction
-            syllogisms={ SYLLOGISMS }
+            syllogisms={[ example ]}
           />
         </div>
       </Layout>

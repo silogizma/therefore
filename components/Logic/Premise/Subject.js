@@ -11,9 +11,16 @@ function input(subject, onChange) {
   );
 }
 
-function select(subject, onChange, conclusionOf) {
-  const options = conclusionOf.map(
-    ({ subject }) => subject
+function select(value, onChange, conclusionOf) {
+  const options = Array.from(
+    new Set(
+      conclusionOf.map(
+        ({ predicate, subject }) => [predicate, subject]
+      ).reduce(
+        (a, b) => a.concat(b),
+        []
+      )
+    )
   );
 
   return (
@@ -21,6 +28,7 @@ function select(subject, onChange, conclusionOf) {
       style={{
         width: 120,
       }}
+      value={ value }
       onChange={
         event =>
           onChange(event.target.value)(event)

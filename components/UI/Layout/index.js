@@ -35,13 +35,6 @@ export default function Layout({
             <a>submit</a>
           </Link>
         </li>
-        <li>
-          <Link
-            prefetch href="/submit"
-          >
-            <a>definitions</a>
-          </Link>
-        </li>
       </ul>
       <section className={ styles.content }>
         { children }

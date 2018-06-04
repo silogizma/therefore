@@ -1,0 +1,11 @@
+.meta label {
+  display: block;
+  color: gray;
+}
+
+.meta input {
+  padding: 3px;
+  font-family: 'Fira Code', monospace;
+  font-size: 1.2em;
+}
+
