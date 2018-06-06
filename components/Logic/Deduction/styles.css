@@ -12,6 +12,8 @@
 
 .Analysis {
   margin-top: 1em;
+  display: inline-block;
+  padding: 20px;
 }
 
 .Proposition {
@@ -35,13 +37,7 @@
   padding: 10px;
   mix-blend-mode: normal;
   /*float: right;*/
-  position: absolute;
-  margin-top: -9.3em;
-  margin-left: 18em;
   text-align: left;
-  width: 18em;
-  border-left: 0 solid #b5fff6;
-  height: 9em;
   background: transparent;
   color: #11859a;
 }

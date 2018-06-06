@@ -51,12 +51,13 @@ const ShareLink = ({ syllogism, base }) => {
       href={ path }
       target={ '_blank' }
       style={{
-        fontSize: 20,
+        fontSize: 30,
         cursor: 'pointer',
-        color: 'black',
+        color: '#0a839a',
         textDecoration: 'none',
-        borderBottom: '2px dotted gray',
-        background: 'yellow'
+        borderBottom: '1px solid #0a839a',
+        background: 'rgba(217, 250, 252, 0.3)',
+        padding: 2,
       }}
     >
       { path }

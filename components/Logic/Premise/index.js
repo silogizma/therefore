@@ -118,7 +118,7 @@ const optionsQuality = (affirmative, onChange) => {
     <select onChange={
       onChange
     }>
-      <option value={ 'affirmative'}>are</option>
+      <option value={ 'affirmative' }>are</option>
       <option value={ 'negative' }>are not</option>
     </select>
   );
@@ -127,23 +127,27 @@ const optionsQuality = (affirmative, onChange) => {
 const optionsQuantity = (universal, onChange) => {
   return (
     <select onChange={ onChange }>
-      <option value={ 'universal' }>all </option>
+      <option value={ 'universal' }>all</option>
       <option value={ 'particular' }>some</option>
     </select>
   );
 }
 
 const makeSyllogism = (
-  universal,
-  affirmative,
-  subject,
-  predicate,
+  universal,      // True or False
+  affirmative,    // True or False
+  subject,        // Human
+  predicate,      // Mortal
   editable,
   onEdit,
 
   selectable,
   conclusionOf,
 ) => {
+  // All human are mortal
+  // Some Socrates socrates are human
+  // Therefore:
+  // Some Socreates are mortal
   const labelQuantity = (
     labelFlaggedBools(
       universal,

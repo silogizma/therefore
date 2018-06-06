@@ -15,7 +15,7 @@
 }
 
 .Canvas circle {
-  /*mix-blend-mode: exclusion;*/
+  mix-blend-mode: exclusion;
 }
 
 .Overlay {

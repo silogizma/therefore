@@ -137,24 +137,21 @@ export default ({
           cx={ size / 2 }
           cy={ slice }
           r={ area }
-          stroke={ colorify(beta) }
-          fill={ 'transparent' }
+          fill={ colorify(beta) }
           strokeWidth={ strokeSize }
         />
         <circle
           cx={ slice }
           cy={ slice * 2 }
           r={ area }
-          stroke={ colorify(alpha) }
-          fill={ 'transparent' }
+          fill={ colorify(alpha) }
           strokeWidth={ strokeSize }
         />
         <circle
           cx={ slice * 2 }
           cy={ slice * 2 }
           r={ area }
-          stroke={ colorify(gamma) }
-          fill={ 'transparent' }
+          fill={ colorify(gamma) }
           strokeWidth={ strokeSize }
         />
       </svg>

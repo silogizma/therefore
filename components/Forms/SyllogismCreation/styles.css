@@ -7,5 +7,21 @@
   padding: 3px;
   font-family: 'Fira Code', monospace;
   font-size: 1.2em;
+  width: 10em;
 }
 
+.meta {
+  display: inline-block;
+  max-width: 10em;
+  position: absolute;
+  margin-top: -4em;
+  margin-left: 3em;
+}
+
+.CreationForm {
+  overflow: hidden;
+}
+
+.CreationForm .form {
+  display: inline-block;
+}
