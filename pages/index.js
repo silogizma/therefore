@@ -6,7 +6,6 @@ import Landing from '../components/UI/Landing';
 import Syllogism from '../components/Logic/Syllogism';
 import Deduction from '../components/Logic/Deduction';
 import Argument from '../components/Logic/Argument';
-import Visualization from '../components/Logic/Visualization/Proposition';
 
 import syllogism from '../models/syllogism';
 import premise from '../models/premise';
