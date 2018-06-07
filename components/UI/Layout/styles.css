@@ -121,7 +121,30 @@ footer a {
   cursor: grabbing;
 }
 
+i {
+  font-style: normal;
+  color: lightgray;
+}
+
 footer a:hover {
   color: black;
   text-decoration: underline;
+}
+
+hr {
+  border-left: 0;
+  border-right: 0;
+  border-top: 2px solid #afe6ff;
+  border-bottom: 0;
+  display: inline-block;
+  width: 90%;
+  margin-left: 5%;
+}
+
+pre {
+  font-family: inherit;
+  padding: 0;
+  margin: 0 0;
+  color: inherit;
+  color: lightgray;
 }

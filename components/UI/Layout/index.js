@@ -9,16 +9,18 @@ export default function Layout({
   return (
     <div className={ styles.grid }>
       <h1 className={ styles.logo }>
-        <a
+        <Link
           href={'/'}
         >
-          <img
-            height={ 60 }
-            width={ 60 }
-            alt={ 'silogizma' }
-            src="/static/logo.png"
-          />
-        </a>
+          <a>
+            <img
+              height={ 60 }
+              width={ 60 }
+              alt={ 'silogizma' }
+              src="/static/logo.png"
+            />
+          </a>
+        </Link>
       </h1>
       <ul className={ styles.nav }>
         <li>
@@ -26,6 +28,13 @@ export default function Layout({
             href="/"
           >
             <a>home</a>
+          </Link>
+        </li>
+        <li>
+          <Link
+            prefetch href="/definitions"
+          >
+            <a>definitions</a>
           </Link>
         </li>
         <li>

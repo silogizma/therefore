@@ -18,25 +18,25 @@ const INITIAL_STATE = syllogism({
   major: premise({
     universal: true,
     affirmative: true,
-    subject: 'cats',
-    predicate: 'happy',
+    subject: 'humans',
+    predicate: 'mortal',
   }),
   minor: premise({
     universal: false,
     affirmative: true,
-    subject: 'dogs',
-    predicate: 'happy',
+    subject: 'socrates',
+    predicate: 'human',
   }),
   conclusion: premise({
     universal: false,
     affirmative: true,
-    subject: 'cats',
-    predicate: 'dogs',
+    subject: 'socrates',
+    predicate: 'mortal',
   }),
   meta: {
-    language: 'english',
-    dialect: 'istanbul',
-    observer: 'fatih',
+    language: '',
+    dialect: '',
+    observer: '',
   },
 });
 

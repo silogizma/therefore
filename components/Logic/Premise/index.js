@@ -43,9 +43,32 @@ const spaceDelimiter = (
   <span>{' '}</span>
 );
 
+function stringToColor(str) {
+  // https://stackoverflow.com/a/16348977/498402
+  let i, hash;
+
+  for (
+    i = 0, hash = 0;
+    i < str.length;
+    hash = str.charCodeAt(i++) + ((hash << 5) - hash)
+  );
+
+  let color = Math.floor(
+    Math.abs(
+        (Math.sin(hash) * 10000)
+        % 1          // 💃
+        * 16777216   // 🍄
+    )
+  ).toString(
+    16
+  );
+
+  return '#' + Array(6 - color.length + 1).join('0') + color;
+}
+
 const colorify = (word, children) => (
   <span style={{
-    color: `#${ md5(word).substring(0, 6) }`,
+    color: stringToColor(word),
   }}>
     { children }
   </span>

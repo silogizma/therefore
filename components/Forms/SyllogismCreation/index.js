@@ -27,14 +27,16 @@ export default function SyllogismCreation({
         <p>
           <label>in this language</label>
           <input
+            placeholder={ 'lisp' }
             value={ language }
             onChange={ event => onEdit('meta')('language', event.target.value) }
           />
         </p>
         <p>
-          <label>dialect (maybe)</label>
+          <label>dialect</label>
           <input
             value={ dialect }
+            placeholder={ 'clojure' }
             onChange={ event => onEdit('meta')('dialect', event.target.value) }
           />
         </p>
@@ -42,6 +44,7 @@ export default function SyllogismCreation({
           <label>point of view</label>
           <input
             value={ observer }
+            placeholder={ 'author' }
             onChange={ event => onEdit('meta')('observer', event.target.value) }
           />
         </p>

@@ -37,7 +37,10 @@ function select(value, onChange, conclusionOf) {
       {
         options.map(
           (value, index) =>
-            <option key={ index }>
+            <option
+              value={ value }
+              key={ index }
+            >
               { value }
             </option>
         )
