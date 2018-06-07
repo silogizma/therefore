@@ -11,7 +11,7 @@
     "parse-svg-path": "^0.1.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "svg-path-bounds": "^1.0.1",
+    "svg-path-bounds": "^1.0.1"
   },
   "scripts": {
     "dev": "next",
