@@ -1,6 +1,7 @@
 ## Deductive Reasoning Tool
 
-Not ready yet.
+![Therefore](https://raw.githubusercontent.com/silogizma/therefore/master/docs/silogizma.gif)
+
 
 ### Syllogism
 
