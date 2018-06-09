@@ -7,6 +7,7 @@ const renderSyllogism = Proposition;
 
 export default function Deduction({
   syllogisms,
+  ...props,
 }) {
   return (
     <div className={ styles.Deduction }>
@@ -15,6 +16,7 @@ export default function Deduction({
           (syllo, index) =>
             <Proposition
               key={ index }
+              {...props}
               {...syllo}
             />
         )

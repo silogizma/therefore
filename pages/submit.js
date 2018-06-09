@@ -12,6 +12,8 @@ import SyllogismCreation from '../components/Forms/SyllogismCreation';
 import syllogism from '../models/syllogism';
 import premise from '../models/premise';
 import uniqueId from '../models/uniqueId';
+import determineInterfaceLanguage from '../i18n/languageFromRequest';
+import translate from '../i18n/translate';
 
 const INITIAL_STATE = syllogism({
   id: 'burdan-baksan-bir-unique-id',
@@ -105,6 +107,14 @@ const buildSyllogismPath = ({
 }
 
 export default class extends Component {
+  static getInitialProps({ req, }) {
+    return {
+      language: determineInterfaceLanguage(
+        typeof location !== 'undefined' ? { headers: location } : req
+      )
+    };
+  }
+
   constructor(props) {
     super(props);
 
@@ -133,19 +143,22 @@ export default class extends Component {
 
   render() {
     const { buffer } = this.state;
+    const { language } = this.props;
     return (
-      <Layout>
+      <Layout page='submit'>
         <div style={{ padding: 10 }}>
-          <Heading><i>create an argument</i></Heading>
+          <Heading><i>{ translate(language, 'new argument') }</i></Heading>
           <SyllogismCreation
+            interfaceLanguage={ language }
             onEdit={ this.handleUpdate }
             buffer={ buffer }
           />
-          <Heading><i>preview</i></Heading>
+          <Heading><i>{ translate(language, 'preview') }</i></Heading>
           <Deduction
+            interfaceLanguage={ language }
             syllogisms={ [buffer] }
           />
-          <Heading><i>share</i></Heading>
+          <Heading><i>{ translate(language, 'share') }</i></Heading>
           <ShareLink
             syllogism={ buffer }
             base={ `http://silogizma.org/syllogism` }

@@ -3,10 +3,12 @@ import React, { Component } from 'react';
 import syllogismType from '../../../models/syllogismType';
 import Syllogism from '../../../models/syllogism';
 import WEAK_FORMS from '../../../models/weakForms';
+import translate from '../../../i18n/translate';
 import styles from './styles.css';
 
 export default function Proposition({
   syllogism,
+  interfaceLanguage,
 }) {
   const type = syllogismType(syllogism);
   const {
@@ -24,14 +26,18 @@ export default function Proposition({
   const lines = [
     type && (
       <div className={ styles.ValidArgument }>
-        argument in
+        { 
+          translate(
+            interfaceLanguage,
+            'argument form',
+          ) 
+        }
+        { ':' }
         <a
           href={ 'https://www.wikiwand.com/en/Syllogism#/Types' }
           target={ '_blank' }
-        >
-          {type}
+        >{type}
         </a>
-        form
       </div>
     ),
 

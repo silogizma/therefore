@@ -6,6 +6,8 @@ import renderSubject from './Subject';
 import renderPredicate from './Predicate';
 
 import md5 from '../../../lib/md5.js';
+import translate from '../../../i18n/translate';
+
 import styles from './styles.css';
 
 const not       = (o  =>!  o);
@@ -161,11 +163,12 @@ const makeSyllogism = (
   affirmative,    // True or False
   subject,        // Human
   predicate,      // Mortal
+
   editable,
   onEdit,
-
   selectable,
   conclusionOf,
+  interfaceLanguage,
 ) => {
   // All human are mortal
   // Some Socrates socrates are human
@@ -175,10 +178,18 @@ const makeSyllogism = (
     labelFlaggedBools(
       universal,
       affirmative,
-      'all',            // universalAndAffirmative
-      'some',           // notUniversalAndAffirmative
-      'no',             // universalAndNotAffirmative
-      'some',           // notUniversalAndNotAffirmative
+
+      // All human are mortal
+      translate(interfaceLanguage, 'all'),      // universalAndAffirmative
+
+      // Some human are mortal
+      translate(interfaceLanguage, 'some'),     // notUniversalAndAffirmative
+
+      // No human are mortal
+      translate(interfaceLanguage, 'no'),       // universalAndNotAffirmative
+
+      // Some human are not mortal
+      translate(interfaceLanguage, 'some'),     // notUniversalAndNotAffirmative
     )
   );
 
@@ -186,10 +197,10 @@ const makeSyllogism = (
     labelFlaggedBools(
       universal,
       affirmative,
-      'are',            // universalAndAffirmative
-      'are',            // notUniversalAndAffirmative
-      'are',            // universalAndNotAffirmative
-      'are not',        // notUniversalAndNotAffirmative
+      translate(interfaceLanguage, 'are'),      // universalAndAffirmative
+      translate(interfaceLanguage, 'are'),      // notUniversalAndAffirmative
+      translate(interfaceLanguage, 'are'),      // universalAndNotAffirmative
+      translate(interfaceLanguage, 'are not'),  // notUniversalAndNotAffirmative
     )
   );
 
@@ -284,18 +295,21 @@ export default function Premise({
   onEdit,
   selectable,
   conclusionOf,
+  interfaceLanguage,
 }) {
 
   const asSyllogism = (
     makeSyllogism(
-      universal,
-      affirmative,
-      subject,
-      predicate,
+      universal,               // All
+      affirmative,             // Human
+      subject,                 // Are
+      predicate,               // Mortal
+
       editable,
       onEdit,
       selectable,
       conclusionOf,
+      interfaceLanguage,
     )
   );
 

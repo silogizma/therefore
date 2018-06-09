@@ -1,10 +1,10 @@
 .Landing {
   padding: 13px 10px 8px;
   color: #11859a;
-  background: #ffffffb3;
+  /*background: #ffffffb3;*/
   border-top: 1px solid #b5fff6;
   border-bottom: 1px solid #b5fff6;
-  background: #edfbff;
+  /*background: #edfbff;*/
   text-shadow: 1px 1px #e6e6e6;
   margin: 10px;
 }

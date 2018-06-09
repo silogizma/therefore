@@ -6,6 +6,7 @@ import styles from './styles.css';
 
 export default function Proposition({
   id,
+  interfaceLanguage,
   ...syllogism,
 }) {
   return (
@@ -15,9 +16,11 @@ export default function Proposition({
     >
       <Syllogism
         id={ id }
+        interfaceLanguage={ interfaceLanguage }
         { ...syllogism }
       />
       <Analysis
+        interfaceLanguage={ interfaceLanguage }
         syllogism={ syllogism }
       />
     </div>

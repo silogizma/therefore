@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import translate from '../../../i18n/translate';
 
 import styles from './styles.css';
 
@@ -6,21 +7,28 @@ export default function Argument({
   language,
   dialect,
   observer,
+  interfaceLanguage,
 }) {
   return (
     <div className={ styles.Container }>
       <span className={ styles.Label }>
-        language
+        { translate(interfaceLanguage, 'language') }
       </span>
-      { language } <br />
+      <span className={ styles.Value }>
+        { language }
+      </span>
       <span className={ styles.Label }>
-        diealect
+        { translate(interfaceLanguage, 'dialect') }
       </span>
-      { dialect } <br />
+      <span className={ styles.Value }>
+        { dialect }
+      </span>
       <span className={ styles.Label }>
-        observer
+        { translate(interfaceLanguage, 'observer') }
       </span>
-      { observer }
+      <span className={ styles.Value }>
+        { observer }
+      </span>
     </div>
   );
 }

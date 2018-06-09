@@ -1,8 +1,9 @@
 .Deduction {
   background: white;
-  padding: 5px 10px 10px 10px;
+  padding: 5px 10px 10px 20px;
   border-top: 1px solid #b5fff6;
   border-bottom: 1px solid #b5fff6;
+  border-right: 1px solid #b5fff6;
   background-size: 20px 20px;
   background-position: 0 -1px;
   background-image: 

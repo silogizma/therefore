@@ -3,17 +3,28 @@
   background: white;
   margin: 0px 0;
   padding: 20px;
-  border-top: 1px solid #b5fff6;
-  border-bottom: 1px solid #b5fff6;
+  border: 1px solid #b5fff6;
+  border-left: 0;
   background-size: 20px 20px;
   background-position: 0 -1px;
   background-image: 
     linear-gradient( to right, #d8faff 1px, transparent 1px),
     linear-gradient( to bottom, #d8faff 1px, transparent 1px);
+  overflow: hidden;
+  text-align: center;
 }
 
 .Label {
-  width: 140px;
+  /*width: 140px;*/
   display: inline-block;
   color: #484848;
+}
+
+.Label, .Value {
+  float: left;
+}
+
+.Value {
+  margin-right: 1.5em;
+  margin-left: 0.3em;
 }

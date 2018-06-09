@@ -60,6 +60,15 @@ body {
   mix-blend-mode: difference;
   color: slategray;
   cursor: pointer;
+  padding: 0 10px;
+  border: 2px solid transparent;
+}
+
+.nav li a:active,
+.nav li a.currentLink {
+  border: 2px solid black;
+  background: #f0ff89;
+  color: black;
 }
 
 .nav li a:hover {
@@ -147,4 +156,21 @@ pre {
   margin: 0 0;
   color: inherit;
   color: lightgray;
+}
+
+.preferences {
+  padding: 10px 20px;
+}
+
+.preferences span {
+  border-bottom: 2px solid currentColor;
+}
+
+.preferences span:first-child {
+  display: inline-block;
+}
+
+.preferences span:last-child {
+  display: inline-block;
+  float: right;
 }

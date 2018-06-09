@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Premise from '../Premise';
 import Conclusion from '../Conclusion';
 import Label from './Label';
+import translate from '../../../i18n/translate';
 import styles from './styles.css';
 
 export default function Syllogism({
@@ -11,15 +12,19 @@ export default function Syllogism({
   conclusion,
   editable,
   onEdit,
+
+  interfaceLanguage,
 }) {
   return (
     <div className={ styles.Container }>
       <Premise
+        interfaceLanguage={ interfaceLanguage }
         editable={ editable }
         onEdit={ onEdit('major') }
         { ...major }
       />
       <Premise
+        interfaceLanguage={ interfaceLanguage }
         editable={ editable }
         onEdit={ onEdit('minor') }
         { ...minor }
@@ -27,9 +32,11 @@ export default function Syllogism({
       <Label
         className={ styles.LabelTherefore }
       >
-        <span>∴</span>therefore
+        <span>∴</span>
+        { translate(interfaceLanguage, 'therefore') }
       </Label>
       <Conclusion
+        interfaceLanguage={ interfaceLanguage }
         major={ major }
         minor={ minor }
         editable={ editable }

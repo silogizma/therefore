@@ -7,6 +7,8 @@ import Syllogism from '../components/Logic/Syllogism';
 import Deduction from '../components/Logic/Deduction';
 import Argument from '../components/Logic/Argument';
 
+import translate from '../i18n/translate';
+
 import syllogism from '../models/syllogism';
 import premise from '../models/premise';
 import uniqueId from '../models/uniqueId';
@@ -48,20 +50,28 @@ export default ({
     observer: 'bager',
   };
 
+  const interfaceLanguage = 'tr';
+
   return (
     <div>
-      <Layout>
-        <Landing />
-        <Heading style={{ color: 'gray', paddingLeft: 10 }}>example</Heading>
+      <Layout page={ 'home' }>
+        <Landing lang={ interfaceLanguage } />
+        <Heading
+          style={{ color: 'gray', paddingLeft: 10 }}
+        >
+          { translate(interfaceLanguage, 'example') }
+        </Heading>
         <div style={{ padding: 10 }}>
-          <Heading><i>context</i></Heading>
+          <Heading><i>{ translate(interfaceLanguage, 'context') }</i></Heading>
           <Argument
             language={ lang }
             dialect={ dialect }
             observer={ observer }
+            interfaceLanguage={ interfaceLanguage }
           />
-          <Heading><i>argument</i></Heading>
+          <Heading><i>{ translate(interfaceLanguage, 'argument') }</i></Heading>
           <Deduction
+            interfaceLanguage={ interfaceLanguage }
             syllogisms={[ example ]}
           />
         </div>
