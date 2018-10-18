@@ -18,13 +18,17 @@
     "build": "next build",
     "export": "next export",
     "start": "next start",
-    "format": "prettier --write **/*.js",
-    "precommit": "lint-staged"
+    "format": "prettier --write **/*.js"
   },
   "devDependencies": {
     "husky": "^1.1.2",
     "lint-staged": "^7.3.0",
     "prettier": "^1.14.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
   },
   "lint-staged": {
     "*.js": [
