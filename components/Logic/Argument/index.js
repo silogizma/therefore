@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import translate from "../../../i18n/translate";
 
 import styles from "./styles.css";

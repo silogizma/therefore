@@ -1,17 +1,11 @@
 import React, { Component } from "react";
-import Link from "next/link";
 
 import Layout from "../components/UI/Layout";
 import Heading from "../components/UI/Heading";
-import Syllogism from "../components/Logic/Syllogism";
 import Deduction from "../components/Logic/Deduction";
-import Premise from "../components/Logic/Premise";
-import Argument from "../components/Logic/Argument";
 import SyllogismCreation from "../components/Forms/SyllogismCreation";
-
 import syllogism from "../models/syllogism";
 import premise from "../models/premise";
-import uniqueId from "../models/uniqueId";
 import determineInterfaceLanguage from "../i18n/languageFromRequest";
 import translate from "../i18n/translate";
 

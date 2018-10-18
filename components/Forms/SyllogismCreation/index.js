@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Syllogism from "../../Logic/Syllogism";
 import styles from "./styles.css";

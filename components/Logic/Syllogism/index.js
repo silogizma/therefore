@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import Premise from "../Premise";
 import Conclusion from "../Conclusion";

@@ -1,17 +1,11 @@
-import Link from "next/link";
-
 import Layout from "../components/UI/Layout";
 import Heading from "../components/UI/Heading";
 import Landing from "../components/UI/Landing";
-import Syllogism from "../components/Logic/Syllogism";
 import Deduction from "../components/Logic/Deduction";
 import Argument from "../components/Logic/Argument";
-
 import translate from "../i18n/translate";
-
 import syllogism from "../models/syllogism";
 import premise from "../models/premise";
-import uniqueId from "../models/uniqueId";
 
 const example = syllogism({
   id: "burdan-baksan-bir-unique-id",
@@ -35,7 +29,7 @@ const example = syllogism({
   })
 });
 
-export default ({ url }) => {
+export default () => {
   const { lang, dialect, observer } = {
     lang: "biology",
     dialect: "english",

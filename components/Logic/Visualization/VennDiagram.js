@@ -1,7 +1,4 @@
-import md5 from "../../../lib/md5.js";
 import styles from "./styles.css";
-
-const colorify = term => `#${md5(term).substring(0, 6)}`;
 
 const Diagram = ({ universal, affirmative, subject, predicate }) => {
   const width = 700;

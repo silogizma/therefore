@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import renderQuantity from "./Quantity";
 import renderQuality from "./Quality";

@@ -1,10 +1,6 @@
 import React, { Component } from "react";
 import * as d3 from "d3";
 import { VennDiagram } from "venn.js";
-import md5 from "../../../lib/md5.js";
-import styles from "./styles.css";
-
-const colorify = term => `#${md5(term).substring(0, 6)}`;
 
 export default class extends Component {
   componentDidMount() {

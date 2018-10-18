@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Link from "next/link";
+import cc from "classcat";
 
 import translate from "../../../i18n/translate";
 import styles from "./styles.css";
@@ -29,21 +30,23 @@ export default class Layout extends Component {
         <ul className={styles.nav}>
           <li>
             <Link href="/">
-              <a className={page === "home" && styles.currentLink}>
+              <a className={cc({ [styles.current]: page === "home" })}>
                 {translate(lang, "home")}
               </a>
             </Link>
           </li>
           <li>
             <Link prefetch href="/definitions">
-              <a className={page === "definitions" && styles.currentLink}>
+              <a
+                className={cc({ [styles.currentLink]: page === "definitions" })}
+              >
                 {translate(lang, "definitions")}
               </a>
             </Link>
           </li>
           <li>
             <Link prefetch href="/submit">
-              <a className={page === "submit" && styles.currentLink}>
+              <a className={cc({ [styles.currentLink]: page === "submit" })}>
                 {translate(lang, "submit")}
               </a>
             </Link>

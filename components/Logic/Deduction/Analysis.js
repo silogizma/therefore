@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 
 import syllogismType from "../../../models/syllogismType";
 import Syllogism from "../../../models/syllogism";
