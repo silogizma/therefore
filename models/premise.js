@@ -1,19 +1,19 @@
 const Premise = (options = {}) => ({
   universal: true,
   affirmative: true,
-  subject: 'human',
-  predicate: 'mortal',
-  ...options,
+  subject: "human",
+  predicate: "mortal",
+  ...options
 });
 
 Premise.FORMS = {
-  A: { universal: true,  affirmative: true  },
-  E: { universal: true,  affirmative: false },
-  I: { universal: false, affirmative: true  },
-  O: { universal: false, affirmative: false },
+  A: { universal: true, affirmative: true },
+  E: { universal: true, affirmative: false },
+  I: { universal: false, affirmative: true },
+  O: { universal: false, affirmative: false }
 };
 
-Premise.getPropositionForm = (proposition) => {
+Premise.getPropositionForm = proposition => {
   for (let key in Premise.FORMS) {
     const form = Premise.FORMS[key];
 
@@ -28,16 +28,12 @@ Premise.getPropositionForm = (proposition) => {
 };
 
 Premise.fromString = string => {
-  const [
-    form,
-    subject,
-    predicate,
-  ] = string.split('-');
+  const [form, subject, predicate] = string.split("-");
 
   return {
-    ...(Premise.FORMS[form.toUpperCase()]),
+    ...Premise.FORMS[form.toUpperCase()],
     subject,
-    predicate,
+    predicate
   };
 };
 

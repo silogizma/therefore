@@ -1,15 +1,5 @@
-import Premise from '../Premise';
+import Premise from "../Premise";
 
-export default ({
-  major,
-  minor,
-  ...props,
-}) => {
-  return (
-    <Premise
-      selectable
-      conclusionOf={[major, minor]}
-      {...props}
-    />
-  );
+export default ({ major, minor, ...props }) => {
+  return <Premise selectable conclusionOf={[major, minor]} {...props} />;
 };

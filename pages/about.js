@@ -1,5 +1,1 @@
-export default () => 
-  <div>
-    liva
-    selam
-  </div>
+export default () => <div>liva selam</div>;
