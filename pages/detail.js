@@ -1,34 +1,27 @@
-import Link from 'next/link';
-
-
-export default ({
-  url,
-}) => {
+export default ({ url }) => {
   const propositions = [];
 
   const path = [
-    'syllogism',
-    '?',
+    "syllogism",
+    "?",
     [
-      'lang=türkçe',
-      'dialect=karabük',
-      'observer=fatih',
+      "lang=türkçe",
+      "dialect=karabük",
+      "observer=fatih",
       `propositions=${propositions}`
-    ].join(
-      '&'
-    )
+    ].join("&")
   ];
 
   return (
     <div>
       <iframe
         style={{
-          position: 'fixed',
+          position: "fixed"
         }}
-        width={ '100%' }
-        height={ '100%' }
-        frameBorder={ 0 }
-        src={ path.join('') }
+        width={"100%"}
+        height={"100%"}
+        frameBorder={0}
+        src={path.join("")}
       />
     </div>
   );

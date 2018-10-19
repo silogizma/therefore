@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React from "react";
 
-import Premise from '../Premise';
-import Conclusion from '../Conclusion';
-import Label from './Label';
-import translate from '../../../i18n/translate';
-import styles from './styles.css';
+import Premise from "../Premise";
+import Conclusion from "../Conclusion";
+import Label from "./Label";
+import translate from "../../../i18n/translate";
+import styles from "./styles.css";
 
 export default function Syllogism({
   major,
@@ -13,35 +13,33 @@ export default function Syllogism({
   editable,
   onEdit,
 
-  interfaceLanguage,
+  interfaceLanguage
 }) {
   return (
-    <div className={ styles.Container }>
+    <div className={styles.Container}>
       <Premise
-        interfaceLanguage={ interfaceLanguage }
-        editable={ editable }
-        onEdit={ onEdit('major') }
-        { ...major }
+        interfaceLanguage={interfaceLanguage}
+        editable={editable}
+        onEdit={onEdit("major")}
+        {...major}
       />
       <Premise
-        interfaceLanguage={ interfaceLanguage }
-        editable={ editable }
-        onEdit={ onEdit('minor') }
-        { ...minor }
+        interfaceLanguage={interfaceLanguage}
+        editable={editable}
+        onEdit={onEdit("minor")}
+        {...minor}
       />
-      <Label
-        className={ styles.LabelTherefore }
-      >
+      <Label className={styles.LabelTherefore}>
         <span>∴</span>
-        { translate(interfaceLanguage, 'therefore') }
+        {translate(interfaceLanguage, "therefore")}
       </Label>
       <Conclusion
-        interfaceLanguage={ interfaceLanguage }
-        major={ major }
-        minor={ minor }
-        editable={ editable }
-        onEdit={ onEdit('conclusion') }
-        { ...conclusion }
+        interfaceLanguage={interfaceLanguage}
+        major={major}
+        minor={minor}
+        editable={editable}
+        onEdit={onEdit("conclusion")}
+        {...conclusion}
       />
     </div>
   );
@@ -49,5 +47,5 @@ export default function Syllogism({
 
 Syllogism.defaultProps = {
   onEdit() {},
-  editable: false,
+  editable: false
 };

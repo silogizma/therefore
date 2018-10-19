@@ -1,17 +1,13 @@
-import React, { Component } from 'react';
+import React from "react";
 
-import renderQuantity from './Quantity';
-import renderQuality from './Quality';
-import renderSubject from './Subject';
-import renderPredicate from './Predicate';
+import renderQuantity from "./Quantity";
+import renderSubject from "./Subject";
+import renderPredicate from "./Predicate";
+import translate from "../../../i18n/translate";
 
-import md5 from '../../../lib/md5.js';
-import translate from '../../../i18n/translate';
+import styles from "./styles.css";
 
-import styles from './styles.css';
-
-const not       = (o  =>!  o);
-const identity  = (x  =>   x);
+const not = o => !o;
 
 // const renderQuantity  = identity;
 // const renderQuality   = identity;
@@ -26,24 +22,19 @@ const labelFlaggedBools = (
   firstAndNotSecond,
   notFirstAndNotSecond,
   defaultLabel = null
-) => (
+) =>
   /*
     universal || affirmative || label
     ----------------------------------------------- */
-                                defaultLabel        ||
-       first  &&     second  && firstAndSecond      ||
-   not(first) &&     second  && notFirstAndSecond   ||
-       first  && not(second) && firstAndNotSecond   ||
-   not(first) && not(second) && notFirstAndNotSecond
-);
+  defaultLabel ||
+  (first && second && firstAndSecond) ||
+  (not(first) && second && notFirstAndSecond) ||
+  (first && not(second) && firstAndNotSecond) ||
+  (not(first) && not(second) && notFirstAndNotSecond);
 
-const endOfCategoricalProposition = (
-  <span>{' '}</span>
-);
+const endOfCategoricalProposition = <span> </span>;
 
-const spaceDelimiter = (
-  <span>{' '}</span>
-);
+const spaceDelimiter = <span> </span>;
 
 function stringToColor(str) {
   // https://stackoverflow.com/a/16348977/498402
@@ -57,28 +48,25 @@ function stringToColor(str) {
 
   let color = Math.floor(
     Math.abs(
-        (Math.sin(hash) * 10000)
-        % 1          // 💃
-        * 16777216   // 🍄
+      ((Math.sin(hash) * 10000) % 1) * // 💃
+        16777216 // 🍄
     )
-  ).toString(
-    16
-  );
+  ).toString(16);
 
-  return '#' + Array(6 - color.length + 1).join('0') + color;
+  return "#" + Array(6 - color.length + 1).join("0") + color;
 }
 
 const colorify = (word, children) => (
-  <span style={{
-    color: stringToColor(word),
-  }}>
-    { children }
+  <span
+    style={{
+      color: stringToColor(word)
+    }}
+  >
+    {children}
   </span>
 );
 
-const turkishPluralEndfixes = (
-  <span>{'(ler-lar)'}</span>
-);
+const turkishPluralEndfixes = <span>{"(ler-lar)"}</span>;
 
 const makeTasim = (universal, affirmative, subject, predicate) => {
   //////////////////////////////////////////////////////////////
@@ -90,26 +78,22 @@ const makeTasim = (universal, affirmative, subject, predicate) => {
   // stays here because of the references                     //
   // see «Logic.premise.makeSyllogism» for the actual version //
   //////////////////////////////////////////////////////////////
-  const labelQuantity = (
-    labelFlaggedBools(
-      universal,
-      affirmative,
-      'tüm',
-       null,
-      'hiçbir',
-       null
-    )
+  const labelQuantity = labelFlaggedBools(
+    universal,
+    affirmative,
+    "tüm",
+    null,
+    "hiçbir",
+    null
   );
 
-  const labelQuality = (
-    labelFlaggedBools(
-       universal,
-       affirmative,
-      '(dir)',
-      '(dir)',
-       spaceDelimiter + 'değildir',
-       spaceDelimiter + 'değildir'
-    )
+  const labelQuality = labelFlaggedBools(
+    universal,
+    affirmative,
+    "(dir)",
+    "(dir)",
+    spaceDelimiter + "değildir",
+    spaceDelimiter + "değildir"
   );
 
   return [
@@ -134,95 +118,90 @@ const makeTasim = (universal, affirmative, subject, predicate) => {
     /*
      * Göstermek istenilen şey de buydu
      * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    endOfCategoricalProposition,
+    endOfCategoricalProposition
   ];
-}
+};
 
 const optionsQuality = (affirmative, onChange) => {
   return (
-    <select onChange={
-      onChange
-    }>
-      <option value={ 'affirmative' }>are</option>
-      <option value={ 'negative' }>are not</option>
+    <select onChange={onChange}>
+      <option value={"affirmative"}>are</option>
+      <option value={"negative"}>are not</option>
     </select>
   );
-}
+};
 
 const optionsQuantity = (universal, onChange) => {
   return (
-    <select onChange={ onChange }>
-      <option value={ 'universal' }>all</option>
-      <option value={ 'particular' }>some</option>
+    <select onChange={onChange}>
+      <option value={"universal"}>all</option>
+      <option value={"particular"}>some</option>
     </select>
   );
-}
+};
 
 const makeSyllogism = (
-  universal,      // True or False
-  affirmative,    // True or False
-  subject,        // Human
-  predicate,      // Mortal
-
+  universal, // True or False
+  affirmative, // True or False
+  subject, // Human
+  predicate, // Mortal
   editable,
   onEdit,
   selectable,
   conclusionOf,
-  interfaceLanguage,
+  interfaceLanguage
 ) => {
   // All human are mortal
   // Some Socrates socrates are human
   // Therefore:
   // Some Socreates are mortal
-  const labelQuantity = (
-    labelFlaggedBools(
-      universal,
-      affirmative,
+  const labelQuantity = labelFlaggedBools(
+    universal,
+    affirmative,
 
-      // All human are mortal
-      translate(interfaceLanguage, 'all'),      // universalAndAffirmative
+    // All human are mortal
+    translate(interfaceLanguage, "all"), // universalAndAffirmative
 
-      // Some human are mortal
-      translate(interfaceLanguage, 'some'),     // notUniversalAndAffirmative
+    // Some human are mortal
+    translate(interfaceLanguage, "some"), // notUniversalAndAffirmative
 
-      // No human are mortal
-      translate(interfaceLanguage, 'no'),       // universalAndNotAffirmative
+    // No human are mortal
+    translate(interfaceLanguage, "no"), // universalAndNotAffirmative
 
-      // Some human are not mortal
-      translate(interfaceLanguage, 'some'),     // notUniversalAndNotAffirmative
-    )
+    // Some human are not mortal
+    translate(interfaceLanguage, "some") // notUniversalAndNotAffirmative
   );
 
-  const labelQuality = (
-    labelFlaggedBools(
-      universal,
-      affirmative,
-      translate(interfaceLanguage, 'are'),      // universalAndAffirmative
-      translate(interfaceLanguage, 'are'),      // notUniversalAndAffirmative
-      translate(interfaceLanguage, 'are'),      // universalAndNotAffirmative
-      translate(interfaceLanguage, 'are not'),  // notUniversalAndNotAffirmative
-    )
+  const labelQuality = labelFlaggedBools(
+    universal,
+    affirmative,
+    translate(interfaceLanguage, "are"), // universalAndAffirmative
+    translate(interfaceLanguage, "are"), // notUniversalAndAffirmative
+    translate(interfaceLanguage, "are"), // universalAndNotAffirmative
+    translate(interfaceLanguage, "are not") // notUniversalAndNotAffirmative
   );
 
   return [
-   /*
+    /*
     * Quantity
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    editable
-      ? optionsQuantity(universal, (event) => {
-        onEdit('universal', event.target.value === 'universal')
+    editable ? (
+      optionsQuantity(universal, event => {
+        onEdit("universal", event.target.value === "universal");
       })
-      : (
-        <span style={{
-            minWidth: '1.7em',
-            display: 'inline-block',
-         }}>
-          { labelQuantity }
-        </span>
-      ),
+    ) : (
+      <span
+        style={{
+          minWidth: "1.7em",
+          display: "inline-block"
+        }}
+      >
+        {labelQuantity}
+      </span>
+    ),
     spaceDelimiter,
 
-   /*
+    /*
     * Subject
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     colorify(
@@ -231,38 +210,36 @@ const makeSyllogism = (
         subject,
         editable,
         value => event => {
-          onEdit('subject', value);
+          onEdit("subject", value);
         },
         selectable,
         conclusionOf
-      ),
+      )
     ),
     spaceDelimiter,
 
-   /*
+    /*
     * Quality
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    (editable
-      ?
-        (  // edit the part of premise
-            optionsQuality(affirmative, (event) => {
-              onEdit('affirmative', event.target.value === 'affirmative')
-            }
-          )
-        )
-      :
-        (  // display the part of premise
-           <span style={{
-              minWidth: '1.7em',
-              display: 'inline-block',
-           }}>
-            { labelQuality }
-          </span>
-        )
-      ),
+    editable ? (
+      // edit the part of premise
+      optionsQuality(affirmative, event => {
+        onEdit("affirmative", event.target.value === "affirmative");
+      })
+    ) : (
+      // display the part of premise
+      <span
+        style={{
+          minWidth: "1.7em",
+          display: "inline-block"
+        }}
+      >
+        {labelQuality}
+      </span>
+    ),
     spaceDelimiter,
 
-   /*
+    /*
     * Predicate
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
     colorify(
@@ -271,20 +248,20 @@ const makeSyllogism = (
         predicate,
         editable,
         value => event => {
-          onEdit('predicate', value);
+          onEdit("predicate", value);
         },
         selectable,
         conclusionOf
       )
     ),
 
-   /*
+    /*
     * Quod Erat Demonstrandum
     * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
-    endOfCategoricalProposition,
+    endOfCategoricalProposition
     /* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
   ];
-}
+};
 
 export default function Premise({
   universal,
@@ -295,35 +272,27 @@ export default function Premise({
   onEdit,
   selectable,
   conclusionOf,
-  interfaceLanguage,
+  interfaceLanguage
 }) {
+  const asSyllogism = makeSyllogism(
+    universal, // All
+    affirmative, // Human
+    subject, // Are
+    predicate, // Mortal
 
-  const asSyllogism = (
-    makeSyllogism(
-      universal,               // All
-      affirmative,             // Human
-      subject,                 // Are
-      predicate,               // Mortal
-
-      editable,
-      onEdit,
-      selectable,
-      conclusionOf,
-      interfaceLanguage,
-    )
+    editable,
+    onEdit,
+    selectable,
+    conclusionOf,
+    interfaceLanguage
   );
 
   return (
-    <div className={ styles.Container }>
-      <div className={ styles.Syllogism }>
-        {
-          asSyllogism.map(
-            (part, index) => 
-              <span key={ index }>
-                { part }
-              </span>
-          )
-        }
+    <div className={styles.Container}>
+      <div className={styles.Syllogism}>
+        {asSyllogism.map((part, index) => (
+          <span key={index}>{part}</span>
+        ))}
       </div>
     </div>
   );
@@ -331,5 +300,5 @@ export default function Premise({
 
 Premise.defaultProps = {
   onEdit() {},
-  editable: false,
+  editable: false
 };

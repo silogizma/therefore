@@ -1,5 +1,5 @@
-export default function (req) {
+export default function(req) {
   const { headers } = req;
-  const [language] = headers.host.split('.');
+  const [language] = headers.host.split(".");
   return language;
 }

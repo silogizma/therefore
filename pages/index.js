@@ -1,78 +1,66 @@
-import Link from 'next/link';
+import Layout from "../components/UI/Layout";
+import Heading from "../components/UI/Heading";
+import Landing from "../components/UI/Landing";
+import Deduction from "../components/Logic/Deduction";
+import Argument from "../components/Logic/Argument";
+import translate from "../i18n/translate";
+import syllogism from "../models/syllogism";
+import premise from "../models/premise";
 
-import Layout from '../components/UI/Layout';
-import Heading from '../components/UI/Heading';
-import Landing from '../components/UI/Landing';
-import Syllogism from '../components/Logic/Syllogism';
-import Deduction from '../components/Logic/Deduction';
-import Argument from '../components/Logic/Argument';
+const example = syllogism({
+  id: "burdan-baksan-bir-unique-id",
+  major: premise({
+    universal: true,
+    affirmative: true,
+    subject: "cats",
+    predicate: "happy"
+  }),
+  minor: premise({
+    universal: false,
+    affirmative: true,
+    subject: "dogs",
+    predicate: "happy"
+  }),
+  conclusion: premise({
+    universal: false,
+    affirmative: true,
+    subject: "cats",
+    predicate: "dogs"
+  })
+});
 
-import translate from '../i18n/translate';
-
-import syllogism from '../models/syllogism';
-import premise from '../models/premise';
-import uniqueId from '../models/uniqueId';
-
-const example =
-  syllogism({
-    id: 'burdan-baksan-bir-unique-id',
-    major: premise({
-      universal: true,
-      affirmative: true,
-      subject: 'cats',
-      predicate: 'happy',
-    }),
-    minor: premise({
-      universal: false,
-      affirmative: true,
-      subject: 'dogs',
-      predicate: 'happy',
-    }),
-    conclusion: premise({
-      universal: false,
-      affirmative: true,
-      subject: 'cats',
-      predicate: 'dogs',
-    }),
-  });
-
-export default ({
-  url,
-}) => {
-
-  const {
-    lang,
-    dialect,
-    observer,
-  } = {
-    lang: 'biology',
-    dialect: 'english',
-    observer: 'bager',
+export default () => {
+  const { lang, dialect, observer } = {
+    lang: "biology",
+    dialect: "english",
+    observer: "bager"
   };
 
-  const interfaceLanguage = 'tr';
+  const interfaceLanguage = "tr";
 
   return (
     <div>
-      <Layout page={ 'home' }>
-        <Landing lang={ interfaceLanguage } />
-        <Heading
-          style={{ color: 'gray', paddingLeft: 10 }}
-        >
-          { translate(interfaceLanguage, 'example') }
+      <Layout page={"home"}>
+        <Landing lang={interfaceLanguage} />
+        <Heading style={{ color: "gray", paddingLeft: 10 }}>
+          {translate(interfaceLanguage, "example")}
         </Heading>
         <div style={{ padding: 10 }}>
-          <Heading><i>{ translate(interfaceLanguage, 'context') }</i></Heading>
+          <Heading>
+            <i>{translate(interfaceLanguage, "context")}</i>
+          </Heading>
           <Argument
-            language={ lang }
-            dialect={ dialect }
-            observer={ observer }
-            interfaceLanguage={ interfaceLanguage }
+            language={lang}
+            dialect={dialect}
+            observer={observer}
+            interfaceLanguage={interfaceLanguage}
           />
-          <Heading><i>{ translate(interfaceLanguage, 'argument') }</i></Heading>
+          <Heading>
+            <i>{translate(interfaceLanguage, "argument")}</i>
+          </Heading>
           <Deduction
-            interfaceLanguage={ interfaceLanguage }
-            syllogisms={[ example ]}
+            interfaceLanguage={interfaceLanguage}
+            syllogisms={[example]}
           />
         </div>
       </Layout>

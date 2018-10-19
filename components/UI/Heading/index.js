@@ -1,21 +1,17 @@
-import React, { Component } from 'react';
+import React from "react";
 
-import styles from './styles.css';
+import styles from "./styles.css";
 
-export default function Heading({
-  children,
-  centered,
-  style = {},
-}) {
+export default function Heading({ children, centered, style = {} }) {
   return (
     <h3
       style={{
         ...style,
-        textAlign: centered ? 'center' : 'left'
+        textAlign: centered ? "center" : "left"
       }}
-      className={ styles.Heading }
+      className={styles.Heading}
     >
-      { children }
+      {children}
     </h3>
   );
 }

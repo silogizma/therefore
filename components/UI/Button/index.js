@@ -1,24 +1,17 @@
-import React, { Component } from 'react';
-import Icon from '../Icon';
+import React from "react";
+import Icon from "../Icon";
 
-import styles from './styles.css';
+import styles from "./styles.css";
 
-export default function Button({
-  icon,
-  label,
-  onClick,
-}) {
+export default function Button({ icon, label, onClick }) {
   return (
     <a
-      href={ '#' }
-      className={ styles.Button }
-      onClick={ event => (event.preventDefault(),
-                          onClick(event)) }
+      href={"#"}
+      className={styles.Button}
+      onClick={event => (event.preventDefault(), onClick(event))}
     >
-      { icon && (
-        <Icon type={ icon } />
-      ) }
-      { label }
+      {icon && <Icon type={icon} />}
+      {label}
     </a>
   );
 }

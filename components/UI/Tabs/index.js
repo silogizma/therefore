@@ -1,18 +1,18 @@
-import React from 'react';
-import classNames from 'classnames';
+import React from "react";
+import classNames from "classcat";
 
-import styles from './styles.css';
+import styles from "./styles.css";
 
 export function Tab({ children }) {
   return children;
-};
+}
 
 export class Tabs extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      current: props.current,
+      current: props.current
     };
   }
 
@@ -20,7 +20,7 @@ export class Tabs extends React.Component {
     event.preventDefault();
 
     this.setState({
-      current: newTabIndex,
+      current: newTabIndex
     });
   };
 
@@ -29,32 +29,28 @@ export class Tabs extends React.Component {
     const { current } = this.state;
 
     return (
-      <div className={ styles.Container }>
-        <header className={ styles.Header }>
-          { children.map(
-            (child, index) => 
-              <a
-                key={ child.key }
-                href={ '#' }
-                onClick={ this.handleTabSwitch(index) }
-                className={ classNames({
-                  [styles.TabHeaderItem]: true,
-                  [styles.TabHeaderItemCurrent]: (
-                    current === index
-                  )})}
-              >
-                { child.props.title }
-              </a>
-          ) }
+      <div className={styles.Container}>
+        <header className={styles.Header}>
+          {children.map((child, index) => (
+            <a
+              key={child.key}
+              href={"#"}
+              onClick={this.handleTabSwitch(index)}
+              className={classNames({
+                [styles.TabHeaderItem]: true,
+                [styles.TabHeaderItemCurrent]: current === index
+              })}
+            >
+              {child.props.title}
+            </a>
+          ))}
         </header>
-        <div className={ styles.Content }>
-          { children[current] }
-        </div>
+        <div className={styles.Content}>{children[current]}</div>
       </div>
     );
   }
 }
 
 Tabs.defaultProps = {
-  current: 0,
+  current: 0
 };

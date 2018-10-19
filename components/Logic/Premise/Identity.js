@@ -1,3 +1,1 @@
-export default kendilerineBagladilar => (
-  kendilerineBagladilar
-);
+export default kendilerineBagladilar => kendilerineBagladilar;
