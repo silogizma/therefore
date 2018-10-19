@@ -1,17 +1,13 @@
 import React from "react";
 
 import renderQuantity from "./Quantity";
-import renderQuality from "./Quality";
 import renderSubject from "./Subject";
 import renderPredicate from "./Predicate";
-
-import md5 from "../../../lib/md5.js";
 import translate from "../../../i18n/translate";
 
 import styles from "./styles.css";
 
 const not = o => !o;
-const identity = x => x;
 
 // const renderQuantity  = identity;
 // const renderQuality   = identity;

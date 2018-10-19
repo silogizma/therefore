@@ -3,9 +3,7 @@ import Link from "next/link";
 import Layout from "../components/UI/Layout";
 import Heading from "../components/UI/Heading";
 import Landing from "../components/UI/Landing";
-import Syllogism from "../components/Logic/Syllogism";
 import Deduction from "../components/Logic/Deduction";
-import Premise from "../components/Logic/Premise";
 import Argument from "../components/Logic/Argument";
 
 import syllogism from "../models/syllogism";

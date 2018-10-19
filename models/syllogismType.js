@@ -1,4 +1,3 @@
-import Premise from "./premise";
 import Syllogism from "./syllogism";
 import WEAK_FORMS from "./weakForms";
 
